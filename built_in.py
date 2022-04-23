@@ -24,6 +24,8 @@ type()	# Returns the type of an object
 open()	# Opens a file and returns a file object
 eval()	# Evaluates and executes an expression
 exec()	# Executes the specified code (or object)
+help()	# Executes the built-in help system
+dir()	# Returns a list of the specified object's properties and methods
 
 filter()	# Use a filter function to exclude items in an iterable object
 map()	# Returns the specified iterator with the specified function applied to each item
@@ -40,7 +42,6 @@ classmethod()	# Converts a method into a class method
 compile()	# Returns the specified source as an object, ready to be executed
 complex()	# Returns a complex number
 delattr()	# Deletes the specified attribute (property or method) from the specified object
-dir()	# Returns a list of the specified object's properties and methods
 divmod()	# Returns the quotient and the remainder when argument1 is divided by argument2
 enumerate()	# Takes a collection (e.g. a tuple) and returns it as an enumerate object
 format()	# Formats a specified value
@@ -49,7 +50,6 @@ getattr()	# Returns the value of the specified attribute (property or method)
 globals()	# Returns the current global symbol table as a dictionary
 hasattr()	# Returns True if the specified object has the specified attribute (property/method)
 hash()	# Returns the hash value of a specified object
-help()	# Executes the built-in help system
 hex()	# Converts a number into a hexadecimal value
 id()	# Returns the id of an object
 isinstance()	# Returns True if a specified object is an instance of a specified object
