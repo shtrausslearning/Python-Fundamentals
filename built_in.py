@@ -3,10 +3,10 @@ float()	# Returns a floating point number
 int()	# Returns an integer number
 bool()	# Returns the boolean value of the specified object
 
-
 dict()	# Returns a dictionary (Array)
 list()	# Returns a list
 set()	# Returns a new set object
+tuple()	# Returns a tuple
 
 max()	# Returns the largest item in an iterable
 min()	# Returns the smallest item in an iterable
@@ -15,7 +15,7 @@ iter()	# Returns an iterator object
 sum()	# Sums the items of an iterator
 reversed()	# Returns a reversed iterator
 
-print()	Prints to the standard output device
+print()	# Prints to the standard output device
 input()	# Allowing user input
 
 filter()	# Use a filter function to exclude items in an iterable object
@@ -69,6 +69,5 @@ sorted()	# Returns a sorted list
 staticmethod()	# Converts a method into a static method
 str()	# Returns a string object
 super()	# Returns an object that represents the parent class
-tuple()	# Returns a tuple
 type()	# Returns the type of an object
 vars()	# Returns the __dict__ property of an object
