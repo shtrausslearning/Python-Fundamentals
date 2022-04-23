@@ -17,6 +17,7 @@ sum()	# Sums the items of an iterator
 reversed()	# Returns a reversed iterator
 all()	# Returns True if all items in an iterable object are true
 any()	# Returns True if any item in an iterable object is true
+range()	# Returns a sequence of numbers, starting from 0 and increments by 1 (by default)
 
 print()	# Prints to the standard output device
 input()	# Allowing user input
@@ -62,7 +63,6 @@ oct()	# Converts a number into an octal
 ord()	# Convert an integer representing the Unicode of the specified character
 pow()	# Returns the value of x to the power of y
 property()	# Gets, sets, deletes a property
-range()	# Returns a sequence of numbers, starting from 0 and increments by 1 (by default)
 repr()	# Returns a readable version of an object
 round()	# Rounds a numbers
 setattr()	# Sets an attribute (property/method) of an object
