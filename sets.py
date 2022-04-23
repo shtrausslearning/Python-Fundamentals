@@ -3,7 +3,8 @@
 # Sets allow you to do operations:
 # - union, 
 # - intersection,
-# - difference. 
+# - difference
+# - symmetric difference
 
 my_set = set()
 my_set.add(1)
@@ -39,7 +40,7 @@ print(my_set.difference(my_set2))
 # sets are immutable; string, int, tuple, floats
 # can't contain lists & dictionaries
 
-# Multiple Operations
+# > Multiple Operations
 
 a = {1, 2, 3, 30, 300}
 b = {10, 20, 30, 40}
@@ -50,3 +51,15 @@ a.difference(b, c)
 
 a - b - c
 # {1, 2, 3}
+
+# > Symmetric Difference (no common elements)
+# returns the set of all elements in either x1 or x2, but not both:
+
+>>> x1 = {'foo', 'bar', 'baz'}
+>>> x2 = {'baz', 'qux', 'quux'}
+
+x1.symmetric_difference(x2)
+# {'foo', 'qux', 'quux', 'bar'}
+
+x1 ^ x2
+# {'foo', 'qux', 'quux', 'bar'}
