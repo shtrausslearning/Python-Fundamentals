@@ -20,6 +20,7 @@ any()	# Returns True if any item in an iterable object is true
 
 print()	# Prints to the standard output device
 input()	# Allowing user input
+type()	# Returns the type of an object
 
 filter()	# Use a filter function to exclude items in an iterable object
 map()	# Returns the specified iterator with the specified function applied to each item
@@ -69,5 +70,4 @@ slice()	# Returns a slice object
 sorted()	# Returns a sorted list
 staticmethod()	# Converts a method into a static method
 super()	# Returns an object that represents the parent class
-type()	# Returns the type of an object
 vars()	# Returns the __dict__ property of an object
