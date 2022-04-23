@@ -38,3 +38,15 @@ print(my_set.difference(my_set2))
 
 # sets are immutable; string, int, tuple, floats
 # can't contain lists & dictionaries
+
+# Multiple Operations
+
+a = {1, 2, 3, 30, 300}
+b = {10, 20, 30, 40}
+c = {100, 200, 300, 400}
+
+a.difference(b, c)
+# {1, 2, 3}
+
+a - b - c
+# {1, 2, 3}
