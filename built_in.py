@@ -2,6 +2,7 @@
 float()	# Returns a floating point number
 int()	# Returns an integer number
 bool()	# Returns the boolean value of the specified object
+str()	# Returns a string object
 
 dict()	# Returns a dictionary (Array)
 list()	# Returns a list
@@ -67,7 +68,6 @@ setattr()	# Sets an attribute (property/method) of an object
 slice()	# Returns a slice object
 sorted()	# Returns a sorted list
 staticmethod()	# Converts a method into a static method
-str()	# Returns a string object
 super()	# Returns an object that represents the parent class
 type()	# Returns the type of an object
 vars()	# Returns the __dict__ property of an object
