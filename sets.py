@@ -9,6 +9,10 @@
 my_set = set()
 my_set.add(1)
 my_set.update([2,1])
+my_set.add(5.4)
+my_set.add((5.2,6.3))
+my_set.discard(5.4)
+my_set.remove((5.2,6.3))
 # Note that the set only contains a single 1 value
 print(f'set1: {my_set}')
 # set1: {1, 2}
