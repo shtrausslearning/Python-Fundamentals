@@ -15,6 +15,8 @@ next()	# Returns the next item in an iterable
 iter()	# Returns an iterator object
 sum()	# Sums the items of an iterator
 reversed()	# Returns a reversed iterator
+all()	# Returns True if all items in an iterable object are true
+any()	# Returns True if any item in an iterable object is true
 
 print()	# Prints to the standard output device
 input()	# Allowing user input
@@ -24,8 +26,6 @@ map()	# Returns the specified iterator with the specified function applied to ea
 zip()	# Returns an iterator, from two or more iterators
 
 abs()	# Returns the absolute value of a number
-all()	# Returns True if all items in an iterable object are true
-any()	# Returns True if any item in an iterable object is true
 ascii()	# Returns a readable version of an object. Replaces none-ascii characters with escape character
 bin()	# Returns the binary version of a number
 bytearray()	# Returns an array of bytes
