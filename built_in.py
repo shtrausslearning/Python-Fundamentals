@@ -22,6 +22,8 @@ print()	# Prints to the standard output device
 input()	# Allowing user input
 type()	# Returns the type of an object
 open()	# Opens a file and returns a file object
+eval()	# Evaluates and executes an expression
+exec()	# Executes the specified code (or object)
 
 filter()	# Use a filter function to exclude items in an iterable object
 map()	# Returns the specified iterator with the specified function applied to each item
@@ -41,8 +43,6 @@ delattr()	# Deletes the specified attribute (property or method) from the specif
 dir()	# Returns a list of the specified object's properties and methods
 divmod()	# Returns the quotient and the remainder when argument1 is divided by argument2
 enumerate()	# Takes a collection (e.g. a tuple) and returns it as an enumerate object
-eval()	# Evaluates and executes an expression
-exec()	# Executes the specified code (or object)
 format()	# Formats a specified value
 frozenset()	# Returns a frozenset object
 getattr()	# Returns the value of the specified attribute (property or method)
