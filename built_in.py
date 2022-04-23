@@ -21,6 +21,7 @@ any()	# Returns True if any item in an iterable object is true
 print()	# Prints to the standard output device
 input()	# Allowing user input
 type()	# Returns the type of an object
+open()	# Opens a file and returns a file object
 
 filter()	# Use a filter function to exclude items in an iterable object
 map()	# Returns the specified iterator with the specified function applied to each item
@@ -58,7 +59,6 @@ locals()	# Returns an updated dictionary of the current local symbol table
 memoryview()	# Returns a memory view object
 object()	# Returns a new object
 oct()	# Converts a number into an octal
-open()	# Opens a file and returns a file object
 ord()	# Convert an integer representing the Unicode of the specified character
 pow()	# Returns the value of x to the power of y
 property()	# Gets, sets, deletes a property
