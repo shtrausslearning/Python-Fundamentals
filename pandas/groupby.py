@@ -1,3 +1,11 @@
+# groupby multiple columns find mean of each group 
+
+df = pd.read_csv("sample1.csv", sep=",")
+result = df.groupby(["name", "category"]).sum()
+print("Group by \"name\" and \"category\" column and sum them")
+print("-------------------------------------")
+print(result)
+
 # aggregate
 
 print(g['price'].agg(np.sum))
@@ -18,6 +26,4 @@ g = df.groupby("name")
 for name, gr in g:
     print("current group is {}".format(name))
     print(f"the corresponding data under group {name}")
-    print("------------------------------------")
     print(gr)
-    print("------------------------------------")
