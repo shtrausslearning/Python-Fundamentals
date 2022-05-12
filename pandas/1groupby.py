@@ -1,3 +1,16 @@
+# get groups in dict form
+
+df = pd.read_csv("sample1.csv", sep=",")
+g = df.groupby("name").groups
+print(g)
+
+# select one group
+
+df = pd.read_csv("sample1.csv", sep=",")
+# print(df.head())
+g1 = df.groupby("category")
+dict(tuple(g1))["A"]
+
 # groupby multiple columns find mean of each group 
 
 df = pd.read_csv("sample1.csv", sep=",")
