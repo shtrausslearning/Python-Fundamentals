@@ -1,3 +1,5 @@
+# merging dataframes
+
 import pandas as pd 
 
 dl = {
@@ -31,3 +33,27 @@ result1 = pd.merge(left, right, on=['pkey', 'pkey2'], how="right")
 print("The final DataFrame has 4 rows")
 print(result1)
 print("-----------------------------------")
+
+# appending dataframes
+
+import pandas as pd
+
+d1 = {"a": [1, 2], "b": [2, 4]}
+df1 = pd.DataFrame(d1)
+print("The first DataFrame")
+print(df1)
+print("------------------------")
+d2 = {"a": [3, 4], "b": [6, 8]}
+df2 = pd.DataFrame(d2)
+print("The second DataFrame")
+print(df2)
+df2 = pd.DataFrame(d2)
+print("------------------------")
+
+df1 = df1.append(df2)
+print("Append the second DataFrame to the first one")
+print(df1)
+
+print("Append the second DataFrame to the first one and set ignore_index=True")
+df1 = df1.append(df2, ignore_index=True)
+print(df1)
