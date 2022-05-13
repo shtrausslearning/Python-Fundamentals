@@ -57,3 +57,21 @@ print(df1)
 print("Append the second DataFrame to the first one and set ignore_index=True")
 df1 = df1.append(df2, ignore_index=True)
 print(df1)
+
+import pandas as pd
+
+d1 = {"b": [1, 2], "c": [2, 4]}
+df1 = pd.DataFrame(d1)
+print("The first DataFrame")
+print(df1)
+print("------------------------")
+d2 = {"c": [3, 4], "d": [6, 8]}
+df2 = pd.DataFrame(d2)
+print("The second DataFrame")
+print(df2)
+df2 = pd.DataFrame(d2)
+print("------------------------")
+
+df1 = df1.append(df2)
+print("Append the second DataFrame to the first one")
+print(df1)
