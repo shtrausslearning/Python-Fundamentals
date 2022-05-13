@@ -75,3 +75,21 @@ print("------------------------")
 df1 = df1.append(df2)
 print("Append the second DataFrame to the first one")
 print(df1)
+
+# concat
+
+import pandas as pd 
+
+d1 = {"a": [1, 2], "b": [2, 4]}
+df1 = pd.DataFrame(d1, index=[1, 2])
+print("The first DataFrame")
+print(df1)
+print("------------------------")
+d2 = {"c": [3, 4], "d": [6, 8]}
+df2 = pd.DataFrame(d2, index=[2, 3])
+print("The second DataFrame")
+print(df2)
+print("------------------------")
+print("The outer join DataFrame")
+df3 = pd.concat([df1, df2], axis=1)
+print(df3)
