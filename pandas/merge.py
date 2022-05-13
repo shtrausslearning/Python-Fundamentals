@@ -76,7 +76,7 @@ df1 = df1.append(df2)
 print("Append the second DataFrame to the first one")
 print(df1)
 
-# concat (outer)
+# concat (outer/all)
 
 import pandas as pd 
 
@@ -94,7 +94,7 @@ print("The outer join DataFrame")
 df3 = pd.concat([df1, df2], axis=1)
 print(df3)
 
-# concat (inner)
+# concat (inner/intersection)
 
 import pandas as pd 
 
