@@ -54,6 +54,9 @@ Access Granted!
 
 #### GET AND SET - Good Example
 
+- Instances use private variables, <code>get</code><code>set</code> compare method arguments to these private variables
+- If there is no match, doesn't grant access to <code>login</code>
+
 ```python
 class User:
     def __init__(self, userName=None, password=None):
@@ -72,11 +75,8 @@ class User:
             print("Invalid Credentials!")
 
 
-# created a new User object and stored the password and username
-Steve = User("Steve", "12345")
-Steve.login("steve", "12345")  # Grants access because credentials are valid
-
-# does not grant access since the credentails are invalid
-Steve.login("steve", "6789")
-Steve.__password  # compilation error
+Steve = User("tom", "234") # created a new User object and stored the password and username
+Steve.login("tom", "234")  # Grants access because credentials are valid
+Steve.login("tom", "6789") # does not grant access since the credentails are invalid
+# Steve.__password           # compilation error will occur due to this line
 ```
