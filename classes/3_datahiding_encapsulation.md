@@ -5,7 +5,7 @@
     - <code>Abstraction</code>
 
 
-### GET AND SETTER
+#### GET AND SETTER
 
 With encapulation, we utilise private variables & utilise <code>get</code>, <codE>setter</code> methods
 
