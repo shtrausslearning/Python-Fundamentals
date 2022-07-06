@@ -534,13 +534,18 @@ class Sedan(Vehicle):
         print("Doors from the Automobile Class:", Automobile.doors)
 
         # accessing fuelCap from the Car class using self
-        print("Fuel cap from the Sedan Class:", self.doors)
+        print("Doors from the Sedan Class:", self.doors)
 
 
 obj1 = Sedan()  # creating a car object
 obj1.display()  # calling the Car class method display()
 
 
+```
+
+```
+Doors from the Automobile Class: 2
+Fuel cap from the Sedan Class: 5
 ```
 
 - Calling the <code>parent</code> class method from the <code>child</code> class via <code>super</code>
@@ -565,3 +570,110 @@ obj1 = Automobile()    # creating a automobile object
 # obj1.display()       # calling the automobile class method
 
 ```
+
+#### USING SUPER WITH INITIALISERS
+
+```python
+
+class Vehicle:
+    def __init__(self, make, color, model):
+        self.make = make
+        self.color = color
+        self.model = model
+
+    def printDetails(self):
+        print("Manufacturer:", self.make)
+        print("Color:", self.color)
+        print("Model:", self.model)
+
+class Automobile(Vehicle):
+    
+    # Constructor, calls parent constructor as well
+    def __init__(self, make, color, model, doors):
+#         super().__init__(make, color, model)         # can use super()
+        Vehicle.__init__(self,make, color, model)      # or just parent class name 
+        self.doors = doors
+
+    # Child class method calls parent class method
+    def printAutomobileDetails(self):
+        self.printDetails()
+        print("Door:", self.doors)
+
+
+obj1 = Automobile("Honda", "Red", "2000", 5)
+obj1.printAutomobileDetails()
+
+```
+
+#### TYPES OF INHERITANCES
+
+There are a couple of ways we can structure class inheritance:
+- single 
+- multi-level
+- Hierarchical
+- Multiple
+- Hibrid
+
+#### SINGLE INHERITANCE
+
+```python
+
+# Parent Class
+class Vehicle: 
+    
+    def setTopSpeed(self, speed): 
+        self.doors = speed
+        print("Number of Doors:", self.doors)
+
+# Child Class
+class Automobile(Vehicle): 
+    
+    def openTrunk(self):
+        print("Trunk is now open")
+
+
+honda = Automobile()           # creating an object of the Car class
+honda.setTopSpeed(4)         # accessing methods from the parent class
+honda.openTrunk()             # accessing method from its own class
+
+```
+
+#### MULTI-LEVEL INHERITANCE
+
+```python
+
+# Parent Class 
+class Vehicle: 
+    
+    def setDoors(self, doors): 
+        self.doors = doors
+        print("Number of Doors:", self.doors)
+
+# Child Class of Class Vehicle 
+class Automobile(Vehicle): 
+    
+    def openTrunk(self):
+        print("Trunk is now open")
+
+
+# Child Class of Class Automobile
+class Electric(Automobile):  # child class of Car
+    
+    # Class method 
+    def turnOnBattery(self):
+        print("Battery has been turned on")
+
+
+Tesla = Electric()       # creating an object of the Hybrid class
+Tesla.setDoors(4)         # accessing methods from the parent class
+Tesla.openTrunk()      # accessing method from the parent class
+Tesla.turnOnBattery()  # accessing method from the child class
+
+```
+
+```
+Number of Doors: 4
+Trunk is now open
+Battery has been turned on
+```
+
