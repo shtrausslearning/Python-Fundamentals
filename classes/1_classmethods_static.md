@@ -608,11 +608,11 @@ obj1.printAutomobileDetails()
 #### TYPES OF INHERITANCES
 
 There are a couple of ways we can structure class inheritance:
-- single 
-- multi-level
-- Hierarchical
-- Multiple
-- Hibrid
+- <code>single</code> 
+- <code>Multi-level</code>
+- <code>Hierarchical</code>
+- <code>Multiple</code>
+- <code>Hybrid</code>
 
 #### SINGLE INHERITANCE
 
@@ -675,5 +675,34 @@ Tesla.turnOnBattery()  # accessing method from the child class
 Number of Doors: 4
 Trunk is now open
 Battery has been turned on
+```
+
+#### HIERARCHICAL INHERITANCE
+
+```python
+
+# Parent Class
+class Vehicle: 
+    
+    # Class method of Parent Class
+    def setTopSpeed(self, speed):  
+        self.topSpeed = speed
+        print("Top Speed ", self.topSpeed)
+
+
+# Child Class of Vehicle
+class Automobile(Vehicle):  
+    pass
+
+# Child Class of Vehicle
+class Motocycle(Vehicle): 
+    pass
+
+Tesla = Automobile()  # creating an object of the Car class
+Tesla.setTopSpeed(150)  # accessing methods from the parent class
+
+Honda = Motocycle()  # creating an object of the Truck class
+Honda.setTopSpeed(100)  # accessing methods from the parent class
+
 ```
 
