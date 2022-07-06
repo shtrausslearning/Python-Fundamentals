@@ -7,6 +7,7 @@ What the notebook covers:
 - Class/Static Methods
 - Access Modifiers
 - Class Inheritance
+- Polymorphism
 
 ### 1 | Initialising Objects
 
@@ -809,5 +810,49 @@ class SavingsAccount(Account):
 
 # create savings account
 demo1 = SavingsAccount("Mark", 2000, 5)  # initializing a SavingsAccount object
+
+```
+
+### 7 | Polymorphism 
+
+#### INTRODUCTION
+
+- Say we have two classes <code>Rectangle</code> & <code>Circle</code>
+- They both have similar methods <code>getArea</code>
+
+```python
+
+# Class Rectangle
+class Rectangle():
+
+    # Constructor
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
+        self.sides = 4
+
+    # method to calculate Area
+    def getArea(self):
+        return (self.width * self.height)
+
+# Class Circle
+class Circle():
+    
+    # Constructor
+    def __init__(self, radius=0):
+        self.radius = radius
+        self.sides = 0
+
+    # method to calculate Area
+    def getArea(self):
+        return (self.radius * self.radius * 3.1419)
+
+
+shapes = [Rectangle(6, 10), Circle(7)]
+print("Sides of a rectangle are", str(shapes[0].sides))
+print("Area of rectangle is:", str(shapes[0].getArea()))
+
+print("Sides of a circle are", str(shapes[1].sides))
+print("Area of circle is:", str(shapes[1].getArea()))
 
 ```
