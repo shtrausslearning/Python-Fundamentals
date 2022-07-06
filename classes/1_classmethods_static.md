@@ -518,28 +518,32 @@ obj.printAutomobileDetails()
 
 ```python
 
-class Vehicle:  # defining the parent class
-    fuelCap = 90
+# Parent Class
+class Automobile:  
+    
+    doors = 2  # parent class variable
 
-
-class Car(Vehicle):  # defining the child class
-    fuelCap = 50
+# Child class
+class Sedan(Vehicle):  
+    
+    doors = 5 # child class variable
 
     def display(self):
+        
         # accessing fuelCap from the Vehicle class using super()
-        print("Fuel cap from the Vehicle Class:", Vehicle.fuelCap)
+        print("Doors from the Automobile Class:", Automobile.doors)
 
         # accessing fuelCap from the Car class using self
-        print("Fuel cap from the Car Class:", self.fuelCap)
+        print("Fuel cap from the Sedan Class:", self.doors)
 
 
-obj1 = Car()  # creating a car object
+obj1 = Sedan()  # creating a car object
 obj1.display()  # calling the Car class method display()
 
 
 ```
 
-- Calling the <code>parent</code> class method
+- Calling the <code>parent</code> class method from the <code>child</code> class via <code>super</code>
 
 ```python
 
@@ -550,7 +554,7 @@ class Vehicle:
         print("Vehicle Class Method")
 
 # Child Class
-class Automobile(Vehicle):  # defining the child class
+class Automobile(Vehicle):  # defining the child class 
     
     # child class method
     def display(self):
