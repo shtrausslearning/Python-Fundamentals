@@ -513,3 +513,51 @@ obj = Automobile("Honda", "Red", "2000", 5)
 obj.printAutomobileDetails()
 
 ```
+
+#### SUPER FUNCTION
+
+```python
+
+class Vehicle:  # defining the parent class
+    fuelCap = 90
+
+
+class Car(Vehicle):  # defining the child class
+    fuelCap = 50
+
+    def display(self):
+        # accessing fuelCap from the Vehicle class using super()
+        print("Fuel cap from the Vehicle Class:", Vehicle.fuelCap)
+
+        # accessing fuelCap from the Car class using self
+        print("Fuel cap from the Car Class:", self.fuelCap)
+
+
+obj1 = Car()  # creating a car object
+obj1.display()  # calling the Car class method display()
+
+
+```
+
+- Calling the <code>parent</code> class method
+
+```python
+
+# Parent Class
+class Vehicle:  
+    
+    def display(self):  # defining display method in the parent class
+        print("Vehicle Class Method")
+
+# Child Class
+class Automobile(Vehicle):  # defining the child class
+    
+    # child class method
+    def display(self):
+        super().display()  
+        print("Automotive Class Method")
+
+obj1 = Automobile()    # creating a automobile object
+# obj1.display()       # calling the automobile class method
+
+```
