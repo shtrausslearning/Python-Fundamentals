@@ -47,17 +47,6 @@ Department : Human Resources
 
 ```
 
-- Printing <code>properties</code> of class instance <code>Tom</code>
-
-```python
-# Printing properties of instance Tom
-print("ID =", Tom.ID)
-print("Salary", Tom.salary)
-print("Department:", Tom.department)
-print("Tax paid by Steve:", Tom.tax())
-print("Salary per day of Steve", Tom.salaryPerDay())
-```
-
 ### Class & Instance Variables 
 
 ```python
@@ -191,12 +180,65 @@ Team Name: Microsoft
 ['Tim', 'Tom']
 ```
 
-### Method Overloading
+- Printing <code>properties</code> of class instance <code>Tom</code>
+
+```python
+# Printing properties of instance Tom
+print("ID =", Tom.ID)
+print("Salary", Tom.salary)
+print("Department:", Tom.department)
+print("Tax paid by Steve:", Tom.tax())
+print("Salary per day of Steve", Tom.salaryPerDay())
+```
+
+### Class Method Implementation
+
+```python
+
+class Employee:
+    
+    # constructor
+    def __init__(self, ID=None, salary=None, department=None):
+        self.ID = ID
+        self.salary = salary
+        self.department = department
+
+    # calcuate the tax portion of the salary
+    def tax(self):
+        return (self.salary * 0.2)
+
+    # calcualte salary per day
+    def salaryPerDay(self):
+        return (self.salary / 30)
+
+
+# initializing an object of the Employee class
+Tim = Employee(213, 100, "data science")
+
+# Printing properties of Steve
+print("ID =", Tim.ID)
+print("Salary", Tim.salary)
+print("Department:", Tim.department)
+print("Tax paid by Steve:", Tim.tax())
+print("Salary per day of Steve", Tim.salaryPerDay())
+
+```
+
+```
+
+ID = 213
+Salary 100
+Department: data science
+Tax paid by Steve: 20.0
+Salary per day of Steve 3.3333333333333335
+
+```
+
+#### METHOD OVERLOADING
 
 - Overloaded methods are compiled faster compared to different methods,
-- especially if the list of methods is long.
-- Allows to implement polymorphism
-- Cleaner code
+- Allows to implement <code>polymorphism</code>
+- We have a cleaner code
 
 ```python
 class Employee:
@@ -250,7 +292,9 @@ d = 4
 e = None
 ```
 
-### Class Methods
+### Class/Static Methods
+
+#### CLASS METHODS
 
 ```python
 class Employee:
@@ -271,20 +315,28 @@ print(Employee.getCompanyName())
 Microsoft
 ```
 
-### Static Methods
+#### STATIC METHODS
 
-class Player:
-    teamName = 'Liverpool'  # class variables
+```python
+class Employee:
+    
+    companyName = 'Microsoft'  # class variables
 
     def __init__(self, name):
         self.name = name  # creating instance variables
 
     @staticmethod
-    def demo():
-        print("I am a static method.")
+    def Entered():
+        print("Entered the building")
 
-p1 = Player('lol')
-p1.demo()
-Player.demo()
+p1 = Employee('Tim')
+p1.Entered()
+Employee.Entered()
+```
+
+```
+Entered the building
+Entered the building
+```
 
 
