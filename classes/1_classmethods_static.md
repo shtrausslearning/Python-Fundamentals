@@ -1,33 +1,47 @@
+
+### Defining a python class
+
+```python
 class Employee:
-    # defining the initializer
+    
+    # Constructor
     def __init__(self, ID=None, salary=None, department=None):
         self.ID = ID
         self.salary = salary
         self.department = department
 
+    # class method; calcuate tax to be deduced from salary
     def tax(self):
         return (self.salary * 0.2)
 
+    # class method; calculate daily salary
     def salaryPerDay(self):
         return (self.salary / 30)
+    
+# create an object of the Employee class
+Tom = Employee(654, 100, "Engineering")
+```
 
+- Printing <code>properties</code> of class instance <code>Tom</code>
 
-# initializing an object of the Employee class
-Steve = Employee(3789, 2500, "Human Resources")
+```python
+# Printing properties of instance Tom
+print("ID =", Tom.ID)
+print("Salary", Tom.salary)
+print("Department:", Tom.department)
+print("Tax paid by Steve:", Tom.tax())
+print("Salary per day of Steve", Tom.salaryPerDay())
+```
 
-# Printing properties of Steve
-print("ID =", Steve.ID)
-print("Salary", Steve.salary)
-print("Department:", Steve.department)
-print("Tax paid by Steve:", Steve.tax())
-print("Salary per day of Steve", Steve.salaryPerDay())
+- Method <code>overloading</code> example
 
 # Method Overloading 
-# - Overloaded methods are compiled faster compared to different methods,
-# - especially if the list of methods is long.
-# - Allows to implement polymorphism
-# - Cleaner code
+- Overloaded methods are compiled faster compared to different methods,
+- especially if the list of methods is long.
+- Allows to implement polymorphism
+- Cleaner code
 
+```python
 class Employee:
     # defining the properties and assigning them None to the
     def __init__(self, ID=None, salary=None, department=None):
@@ -61,6 +75,7 @@ print("\n")
 print("Demo 2")
 Steve.demo(1, 2, 3, 4)
 print("\n")
+```
 
 # Class Methods
 
