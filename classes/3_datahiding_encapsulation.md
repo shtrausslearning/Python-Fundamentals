@@ -4,7 +4,35 @@
     - <code>Encapsulation</code>
     - <code>Abstraction</code>
 
-### Data Hiding - Encapsulation
+
+### GET AND SETTER
+
+With encapulation, we utilise private variables & utilise <code>get</code>, <codE>setter</code> methods
+
+- A getter method allows reading a property’s value
+- A setter method allows modifying a property’s value
+
+```python
+class User:
+    def __init__(self, username=None):  # defining initializer
+        self.__username = username      # private variable
+
+    # set private variable with method
+    def setUsername(self, x):
+        self.__username = x
+
+    # get private variable with method
+    def getUsername(self):
+        return (self.__username)
+
+
+Steve = User('steve1')
+print('Before setting:', Steve.getUsername())
+Steve.setUsername('steve2')
+print('After setting:', Steve.getUsername())
+```
+
+#### Data Hiding - Encapsulation
 
 - <code>Encapsulation</code> in OOP refers to binding data and the methods to manipulate that data together in a single unit, that is, class.
 - When encapsulating classes:
@@ -30,7 +58,7 @@ class User:
     def __init__(self, userName=None, password=None):
         self.userName = userName
         self.password = password
-
+        
     def login(self, userName, password):
         if ((self.userName.lower() == userName.lower())
                 and (self.password == password)):
@@ -38,12 +66,12 @@ class User:
         else:
             print("Invalid Credentials!")
 
+Steve = User("tom", "123")
+Steve.login("tom", "123")
 
-Steve = User("Steve", "12345")
-Steve.login("steve", "12345")
-Steve.login("steve", "6789")
-Steve.password = "6789"
-Steve.login("steve", "6789")
+Steve.login("tom", "345")
+Steve.password = "345"     # access to variables is allowed
+Steve.login("tom", "345")
 ```
 
 ```
@@ -79,4 +107,9 @@ Steve = User("tom", "234") # created a new User object and stored the password a
 Steve.login("tom", "234")  # Grants access because credentials are valid
 Steve.login("tom", "6789") # does not grant access since the credentails are invalid
 # Steve.__password           # compilation error will occur due to this line
+```
+
+```
+Access Granted against username: steve and password: 12345
+Invalid Credentials!
 ```
