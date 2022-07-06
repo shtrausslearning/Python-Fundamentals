@@ -1,5 +1,5 @@
 
-### Initialising Objects
+### 1 | Initialising Objects
 
 #### Defining an initialiser with preset parameters
 
@@ -47,7 +47,7 @@ Department : Human Resources
 
 ```
 
-### Class & Instance Variables 
+### 2 | Class & Instance Variables 
 
 ```python
 class Employee:
@@ -191,7 +191,7 @@ print("Tax paid by Steve:", Tom.tax())
 print("Salary per day of Steve", Tom.salaryPerDay())
 ```
 
-### Class Method Implementation
+### 3 | Class Method Implementation
 
 ```python
 
@@ -292,7 +292,7 @@ d = 4
 e = None
 ```
 
-### Class/Static Methods
+### 4 | Class/Static Methods
 
 #### CLASS METHODS
 
@@ -340,7 +340,7 @@ Entered the building
 Entered the building
 ```
 
-### Access Modifiers
+### 5 | Access Modifiers
 
 #### PUBLIC ATTRIBUTES
 
@@ -431,7 +431,9 @@ AttributeError: 'Employee' object has no attribute '__displayID'
 
 ```
 
-### ACCESSING PRIVATE ATTRIBUTES
+#### ACCESSING PRIVATE ATTRIBUTES
+
+- If we absolutely needed to access the private attributes, python can't actually prevent us
 
 ```python
 class Employee:
@@ -448,4 +450,3 @@ print(Tim._Employee__salary)  # accessing a private property/attribute
 ```
 1000
 ```
-
