@@ -1,5 +1,5 @@
 
-### Defining a python class
+### Defining a Class
 
 ```python
 class Employee:
@@ -35,7 +35,7 @@ print("Salary per day of Steve", Tom.salaryPerDay())
 
 - Method <code>overloading</code> example
 
-# Method Overloading 
+### Method Overloading 
 - Overloaded methods are compiled faster compared to different methods,
 - especially if the list of methods is long.
 - Allows to implement polymorphism
@@ -43,37 +43,40 @@ print("Salary per day of Steve", Tom.salaryPerDay())
 
 ```python
 class Employee:
-    # defining the properties and assigning them None to the
+    
+    # Constructor
     def __init__(self, ID=None, salary=None, department=None):
         self.ID = ID
         self.salary = salary
         self.department = department
 
-    # method overloading
-    def demo(self, a, b, c, d=5, e=None):
+    # method overloading example
+    def overload(self, a, b, c, d=10, e=None):
         print("a =", a)
         print("b =", b)
         print("c =", c)
         print("d =", d)
         print("e =", e)
 
+    # class method; calcuate tax to be deduced from salary
     def tax(self, title=None):
         return (self.salary * 0.2)
 
+    # class method; calculate daily salary
     def salaryPerDay(self):
         return (self.salary / 30)
 
 
 # cerating an object of the Employee class
-Steve = Employee()
+Tom = Employee()
 
 # Printing properties of Steve
 print("Demo 1")
-Steve.demo(1, 2, 3)
+Tom.overload(1, 2, 3)
 print("\n")
 
 print("Demo 2")
-Steve.demo(1, 2, 3, 4)
+Tom.overload(1, 2, 3, 4)
 print("\n")
 ```
 
