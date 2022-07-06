@@ -1,6 +1,6 @@
 ### Two Methods for Data Hiding
 - <code>Encapsulation</code>
-- <code>Abstraction
+- <code>Abstraction</code>
 
 ### Data Hiding - Encapsulation
 
