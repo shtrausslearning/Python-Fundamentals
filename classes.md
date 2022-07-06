@@ -860,8 +860,8 @@ print("Area of circle is:", str(shapes[1].getArea()))
 
 #### POLYMORPHISM VIA INHERITANCE
 
-- The getArea() method returns the area of the respective shape. 
-- This is Polymorphism: 
+- The <code>getArea</code> method returns the area of the respective shape
+- This is <code>Polymorphism</code>:
     - Having unique implementations of the same methods for each class
 
 ```python
