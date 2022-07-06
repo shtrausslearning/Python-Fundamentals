@@ -706,3 +706,76 @@ Honda.setTopSpeed(100)  # accessing methods from the parent class
 
 ```
 
+#### MULTIPLE INHERITANCE
+
+```python
+
+# Parent Class #1 for class HybridEngine
+class CombustionEngine():  
+    def setTankCapacity(self, tankCapacity):
+        self.tankCapacity = tankCapacity
+
+# Parent Class #2 for Class HybridEngine
+class ElectricEngine():  
+    def setChargeCapacity(self, chargeCapacity):
+        self.chargeCapacity = chargeCapacity
+
+# Child Class inherits from both CombustionEngine and ElectricEngine
+class HybridEngine(CombustionEngine, ElectricEngine):
+    def printDetails(self):
+        print("Tank Capacity:", self.tankCapacity)
+        print("Charge Capacity:", self.chargeCapacity)
+
+car = HybridEngine()
+car.setChargeCapacity("250 W")
+car.setTankCapacity("20 Litres")
+car.printDetails()
+
+```
+
+```
+Tank Capacity: 20 Litres
+Charge Capacity: 250 W
+```
+
+#### HYBRID INHERITANCE
+
+- Type of inheritance which is a combination of <code>Multiple</code> and <code>multi-level</code> inheritance 
+
+```python
+
+# Parent Class
+class Engine:  # Parent class
+    def setPower(self, power):
+        self.power = power
+
+# Child Class of Class Engine
+# Parent Class for class Hybrid Engine
+class CombustionEngine(Engine):  
+    def setTankCapacity(self, tankCapacity):
+        self.tankCapacity = tankCapacity
+
+# Child Class of Class Engine
+# Parent Class for class HybridEngine
+class ElectricEngine(Engine):  
+    def setChargeCapacity(self, chargeCapacity):
+        self.chargeCapacity = chargeCapacity
+
+# Child class inherited from CombustionEngine and ElectricEngine
+class HybridEngine(CombustionEngine, ElectricEngine):
+    def printDetails(self):
+        print("Tank Capacity:", self.tankCapacity)
+        print("Charge Capacity:", self.chargeCapacity)
+
+car = HybridEngine()
+car.setChargeCapacity("100 W")
+car.setTankCapacity("10 Litres")
+car.printDetails()
+```
+
+```
+Tank Capacity: 10 Litres
+Charge Capacity: 100 W
+```
+
+```
