@@ -815,10 +815,11 @@ demo1 = SavingsAccount("Mark", 2000, 5)  # initializing a SavingsAccount object
 
 ### 7 | Polymorphism 
 
-#### INTRODUCTION
+#### SIMPLE CASE OF POLYMORPHISM
 
 - Say we have two classes <code>Rectangle</code> & <code>Circle</code>
-- They both have similar methods <code>getArea</code>
+- They both look like they have the same method <code>getArea</code>, but different methods are called. 
+- Thus, we have achieved polymorphism.
 
 ```python
 
@@ -855,4 +856,58 @@ print("Area of rectangle is:", str(shapes[0].getArea()))
 print("Sides of a circle are", str(shapes[1].sides))
 print("Area of circle is:", str(shapes[1].getArea()))
 
+```
+
+#### POLYMORPHISM VIA INHERITANCE
+
+- The getArea() method returns the area of the respective shape. 
+- This is Polymorphism: 
+    - Having unique implementations of the same methods for each class
+
+```python
+
+# Parent Class
+class Shape:
+    
+    # Parent class constructor
+    def __init__(self): 
+        self.sides = 0
+
+    def getArea(self):
+        pass
+
+# Child class of parent class Shape
+class Rectangle(Shape):  
+    
+    # constructor
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
+        self.sides = 4
+
+    # method to calculate Area
+    def getArea(self):
+        return (self.width * self.height)
+
+# Child class of parent class Shape
+class Circle(Shape):  
+    
+    # constructor
+    def __init__(self, radius=0):
+        self.radius = radius
+
+    # method to calculate Area
+    def getArea(self):
+        return (self.radius * self.radius * 3.142)
+
+
+shapes = [Rectangle(3, 5), Circle(3)]
+print("Area of rectangle is:", str(shapes[0].getArea()))
+print("Area of circle is:", str(shapes[1].getArea()))
+
+```
+
+```
+Area of rectangle is: 15
+Area of circle is: 28.278
 ```
