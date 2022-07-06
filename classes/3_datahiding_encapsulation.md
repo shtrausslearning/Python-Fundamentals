@@ -1,3 +1,7 @@
+### Two Methods for Data Hiding
+- <code>Encapsulation</code>
+- <code>Abstraction
+
 ### Data Hiding - Encapsulation
 
 - <code>Encapsulation</code> in OOP refers to binding data and the methods to manipulate that data together in a single unit, that is, class.
