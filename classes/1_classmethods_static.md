@@ -482,11 +482,14 @@ class ChildClass(ParentClass):
 ```python
 
 class Vehicle:
+
+    # Parent Class Constructor
     def __init__(self, make, color, model):
         self.make = make
         self.color = color
         self.model = model
 
+    # Parent Class Method
     def printDetails(self):
         print("Manufacturer:", self.make)
         print("Color:", self.color)
@@ -501,10 +504,10 @@ class Automobile(Vehicle):
         Vehicle.__init__(self,make,color,model)
         self.doors = doors
 
+    # Child Class Method
     def printAutomobileDetails(self):
         self.printDetails()
         print("Doors:", self.doors)
-
 
 obj = Automobile("Honda", "Red", "2000", 5)
 obj.printAutomobileDetails()
