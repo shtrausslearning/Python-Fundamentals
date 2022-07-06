@@ -4,12 +4,10 @@ Data Hiding - Encapsulation
 - To manipulate that data together in a single unit, that is, class.
 - When encapsulating classes, a good convention is to declare all
 - variables of a class private. This will restrict direct access by the code outside that class.
-
 - At this point, a question can be raised: 
 - If the methods and variables are encapsulated in a class, then how can they be used outside of that class?
-
-- The answer to this is simple. 
-- One has to implement public methods to let the outside world communicate with this class. These methods are called getters and setters. We can also implement other custom methods.
+    - The answer to this is simple. One has to implement public methods to let the outside world communicate with this class. 
+    - These methods are called getters and setters. We can also implement other custom methods.
 
 #### ADVANTAGES
 
