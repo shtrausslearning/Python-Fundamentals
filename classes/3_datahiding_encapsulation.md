@@ -44,7 +44,12 @@ Steve.login("steve", "12345")
 Steve.login("steve", "6789")
 Steve.password = "6789"
 Steve.login("steve", "6789")
+```
 
+```
+Access Granted!
+Invalid Credentials!
+Access Granted!
 ```
 
 #### GET AND SET - Good Example
