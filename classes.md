@@ -778,4 +778,36 @@ Tank Capacity: 10 Litres
 Charge Capacity: 100 W
 ```
 
+#### EXAMPLE 
+
+```python
+
+# parent class 
+class Account:
+    def __init__(self, title=None, balance=0):
+        self.title = title
+        self.balance = balance
+
+    def withdrawal(self, amount):
+        self.balance -= amount
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def getBalance(self):
+        return self.balance
+
+
+# child class 
+class SavingsAccount(Account):
+    def __init__(self, title=None, balance=0, interestRate=0):
+        super().__init__(title, balance)  # instantiate parent class; get access
+        self.interestRate = interestRate
+
+    def interestAmount(self):
+        return (self.balance * self.interestRate)/100
+
+# create savings account
+demo1 = SavingsAccount("Mark", 2000, 5)  # initializing a SavingsAccount object
+
 ```
