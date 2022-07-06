@@ -17,12 +17,9 @@ Data Hiding - Encapsulation
 
 #### GET AND SET - Bad Example 
 
-- Anyone can access, change, or print the password and userName
-- fields directly from the main code.
-- This is dangerous in the case of this User class because 
-- there is no encapsulation of the credentials of a user, 
-- which means anyone can access their account by manipulating 
-- the stored data.
+- Anyone can access, change, or print the <code>password</code> and <code>userName</code> fields directly from the main code.
+- This is dangerous in the case of this User class because there is no <code>encapsulation</code> of the credentials of a user, 
+- which means anyone can access their account by manipulating the stored data.
 
 ```python
 class User:
