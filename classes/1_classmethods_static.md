@@ -1,5 +1,13 @@
 ## Python Class Operations
 
+What the notebook covers:
+- Initialsing Objects
+- Class & Instance Variables 
+- Class Method Implementation
+- Class/Static Methods
+- Access Modifiers
+- Class Inheritance
+
 ### 1 | Initialising Objects
 
 #### Defining an initialiser with preset parameters
@@ -450,4 +458,55 @@ print(Tim._Employee__salary)  # accessing a private property/attribute
 
 ```
 1000
+```
+
+### 6 | Class Inheritance 
+
+#### SYNTAX
+
+```python
+
+class ParentClass:
+    # attributes of the parent class
+
+class ChildClass(ParentClass):
+    # attributes of the child class
+
+```
+
+#### EXAMPLE IMPLEMENTATION
+
+- Vehicle is the <code>parent</code> class
+- Automobile is the <code>child</code> class
+
+```python
+
+class Vehicle:
+    def __init__(self, make, color, model):
+        self.make = make
+        self.color = color
+        self.model = model
+
+    def printDetails(self):
+        print("Manufacturer:", self.make)
+        print("Color:", self.color)
+        print("Model:", self.model)
+
+class Automobile(Vehicle):
+    
+    # Automobile Constructor
+    def __init__(self,make,color,model,doors):
+        
+        # Call the parent class constructor
+        Vehicle.__init__(self,make,color,model)
+        self.doors = doors
+
+    def printAutomobileDetails(self):
+        self.printDetails()
+        print("Doors:", self.doors)
+
+
+obj = Automobile("Honda", "Red", "2000", 5)
+obj.printAutomobileDetails()
+
 ```
