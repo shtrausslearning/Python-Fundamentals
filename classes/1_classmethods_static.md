@@ -316,6 +316,7 @@ Microsoft
 ```
 
 #### STATIC METHODS
+- <code>static</code> methods do not know anything about the state of the class
 
 ```python
 class Employee:
