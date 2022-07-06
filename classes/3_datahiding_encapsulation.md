@@ -1,6 +1,8 @@
 ### Two Methods for Information Hiding
 
-- Information hiding refers to the concept of hiding the inner workings of a class and simply providing an interface through which the outside world can interact with the class without knowing what’s going on inside, two types exist:
+- Information hiding refers to the concept of hiding the inner workings of a class 
+- Simply providing an interface through which the outside world can interact with the class
+- Without knowing what’s going on inside, two types exist:
     - <code>Encapsulation</code>
     - <code>Abstraction</code>
 
