@@ -1,5 +1,49 @@
 
-### Defining a Class
+
+## Initialising Objects
+
+### Defining an initialiser
+
+```python
+
+class Employee:
+    # defining the properties and assigning them None
+    def __init__(self, ID, salary, department):
+        self.ID = ID
+        self.salary = salary
+        self.department = department
+
+# Creating an object of the Employee class
+Tom = Employee()                           # uses default parameters
+Tim = Employee("001", 100, "Engineering")  # uses input parameters
+
+print("Tom")
+print("ID :", Tom.ID)
+print("Salary :", Tom.salary)
+print("Department :", Tom.department)
+
+print("Tim")
+print("ID :", Tim.ID)
+print("Salary :", Tim.salary)
+print("Department :", Tim.department)
+
+```
+
+```
+
+Tom
+ID : None
+Salary : 0
+Department : None
+
+Time
+ID : 3789
+Salary : 2500
+Department : Human Resources
+
+```
+
+### Defining an initialiser with additional parameters
 
 ```python
 class Employee:
@@ -22,6 +66,8 @@ class Employee:
 Tom = Employee(654, 100, "Engineering")
 ```
 
+### Defining an initialiser
+
 - Printing <code>properties</code> of class instance <code>Tom</code>
 
 ```python
@@ -32,6 +78,8 @@ print("Department:", Tom.department)
 print("Tax paid by Steve:", Tom.tax())
 print("Salary per day of Steve", Tom.salaryPerDay())
 ```
+
+## Initialising Objects
 
 - Method <code>overloading</code> example
 
@@ -71,14 +119,29 @@ class Employee:
 Tom = Employee()
 
 # Printing properties of Steve
-print("Demo 1")
 Tom.overload(1, 2, 3)
 print("\n")
 
-print("Demo 2")
 Tom.overload(1, 2, 3, 4)
 print("\n")
 ```
+
+```
+a = 1
+b = 2
+c = 3
+d = 10
+e = None
+
+
+a = 1
+b = 2
+c = 3
+d = 4
+e = None
+```
+
+### Class Methods
 
 # Class Methods
 
